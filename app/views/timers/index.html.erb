@@ -1,0 +1,10 @@
+<div class="page-header">
+  <h1><%=t '.title', :default => 'Timer' %></h1>
+</div>
+
+<div>
+	<h1 ng-class="{ready: isReady}">
+		{{ time.minutes }}:{{ time.seconds }}.{{ time.milliseconds }}
+	</h1>
+</div>
+
