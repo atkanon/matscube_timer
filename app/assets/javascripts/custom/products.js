@@ -6,10 +6,15 @@ AppModule.controller('AppController', function($scope, $timeout) {
 		status: 'off'
 	};
 
+	// Style
+	$scope.isReady = false;
+
 	$scope.KeyUp = function(keyEvent) {
+		// Start
 		if (keyEvent.keyCode == 32 && $scope.timer.status == 'off') {
 			$scope.timer.status = 'on';
 			$scope.onTimeout();
+			$scope.isReady = false;
 		}
 		if ($scope.timer.status == 'finished') {
 			$scope.timer.status = 'off';
@@ -20,8 +25,9 @@ AppModule.controller('AppController', function($scope, $timeout) {
 		if ($scope.timer.status == 'on') {
 			$scope.timer.status = 'finished';
 		}
+		// Ready
 		if (keyEvent.keyCode == 32 && $scope.timer.status == 'off') {
-			// ready
+			$scope.isReady = true;
 		}
 	};
 

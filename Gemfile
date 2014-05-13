@@ -13,7 +13,7 @@ group :production do
 end
 
 # Use SCSS for stylesheets
-# gem 'sass-rails', '~> 4.0.2'
+gem 'sass-rails', '~> 4.0.2'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
